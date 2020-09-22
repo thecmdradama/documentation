@@ -7,7 +7,7 @@ PostgreSQL:
 
 Step 1. Log into your PostgreSQL server  
 
-Step 2. Enter the below command to create the base pufferpanel database
+Step 2. Enter the below command to create the pufferpanel database
 CREATE DATABASE pufferpanel;
 
 Step 3. Enter the below command to create the pufferpanel user
@@ -40,7 +40,8 @@ If you are running PostgreSQL on another host, update the host to the relevant I
       "dialect": "postgres",
       "url": "host=192.168.0.1 port=5432 user=pufferpanel dbname=pufferpanel password=<YourChosenPassword>"
     },
- 
+    
+Step 6. Restart the panel. PufferPanel will create the necessary tables in the Database for you.
 
 
 
