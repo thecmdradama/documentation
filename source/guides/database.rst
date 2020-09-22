@@ -2,6 +2,7 @@ Using a Database
 ================
 
 **TODO**
+
 PostgreSQL:
 
 Step 1. Log into your PostgreSQL server  
@@ -15,14 +16,13 @@ CREATE USER pufferpanel WITH PASSWORD '<YourChosenPassword>';
 Step 4. Grant privileges to the pufferpanel database to the pufferpanel user
 GRANT ALL PRIVILEGES ON DATABASE pufferpanel TO pufferpanel;
 
-Important: If you have the PostgreSQL server on a separate host to the panel, you will need to also do the following to allow remote access to the database.
+Important: If you have the PostgreSQL server on a separate host to the panel, you will need to do the following to allow remote access to the database.
 
 Navigate to /etc/postgresql/12/main and edit pg_hba.conf
 
 Add the following line below "# IPv4 LAN connections:"  
-host    pufferpanel     pufferpanel     192.168.0.0/16           md5
-Note: You must use the network/subnet notation. 
 
+host    pufferpanel     pufferpanel     192.168.0.0/16           md5
 
 Step 5. Navigate to /etc/pufferpanel and edit the config.json. 
 Change
