@@ -23,6 +23,7 @@ Navigate to /etc/postgresql/12/main and edit pg_hba.conf
 Add the following line below "# IPv4 LAN connections:"  
 
 host    pufferpanel     pufferpanel     192.168.0.0/16           md5
+You can set the address to a single host i.e. 192.168.1.10/32 or a network i.e. 192.168.0.0/16
 
 Step 5. Navigate to /etc/pufferpanel and edit the config.json. 
 Change
@@ -35,7 +36,7 @@ To
       "dialect": "postgres",
       "url": "host=localhost port=5432 user=pufferpanel dbname=pufferpanel password=<YourChosenPassword>"
     },
-If you are running PostgreSQL on another host, update the host to the relevant IP address
+If you are running PostgreSQL on another host, update the host to the relevant IP address i.e.
     "database": {
       "dialect": "postgres",
       "url": "host=192.168.0.1 port=5432 user=pufferpanel dbname=pufferpanel password=<YourChosenPassword>"
